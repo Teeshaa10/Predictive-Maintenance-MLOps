@@ -1,0 +1,26 @@
+{
+  "classification": [
+    {
+      "model": "RandomForest",
+      "accuracy": 0.977,
+      "precision": 0.6617647058823529,
+      "recall": 0.6617647058823529,
+      "f1": 0.6617647058823529,
+      "roc_auc": 0.9681220314212643
+    },
+    {
+      "model": "GradientBoosting",
+      "accuracy": 0.9765,
+      "precision": 0.8181818181818182,
+      "recall": 0.39705882352941174,
+      "f1": 0.5346534653465347,
+      "roc_auc": 0.96087565460967
+    }
+  ],
+  "rul_proxy": {
+    "mae_minutes": 0.001546875000000001,
+    "rmse_minutes": 0.03093181765997594,
+    "r2": 0.9999997758946021
+  },
+  "selected_classifier": "RandomForest"
+}

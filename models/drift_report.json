@@ -1,0 +1,50 @@
+{
+  "method": "standardized mean shift",
+  "threshold": 0.5,
+  "drift_detected": false,
+  "features_compared": 5,
+  "missing_features": [],
+  "features": {
+    "Air temperature [K]": {
+      "baseline_mean": 300.005,
+      "current_mean": 300.005,
+      "baseline_std": 1.997,
+      "current_std": 2.0,
+      "standardized_shift": 0.0,
+      "drift_flag": false
+    },
+    "Process temperature [K]": {
+      "baseline_mean": 310.006,
+      "current_mean": 310.006,
+      "baseline_std": 1.479,
+      "current_std": 1.484,
+      "standardized_shift": 0.0,
+      "drift_flag": false
+    },
+    "Rotational speed [rpm]": {
+      "baseline_mean": 1539.357,
+      "current_mean": 1538.776,
+      "baseline_std": 180.983,
+      "current_std": 179.284,
+      "standardized_shift": 0.003,
+      "drift_flag": false
+    },
+    "Torque [Nm]": {
+      "baseline_mean": 40.003,
+      "current_mean": 39.987,
+      "baseline_std": 10.02,
+      "current_std": 9.969,
+      "standardized_shift": 0.002,
+      "drift_flag": false
+    },
+    "Tool wear [min]": {
+      "baseline_mean": 107.685,
+      "current_mean": 107.951,
+      "baseline_std": 63.612,
+      "current_std": 63.654,
+      "standardized_shift": 0.004,
+      "drift_flag": false
+    }
+  },
+  "action": "No major mean shift detected."
+}

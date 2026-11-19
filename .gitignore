@@ -1,0 +1,14 @@
+.venv/
+venv/
+__pycache__/
+*.pyc
+.env
+.env.*
+!.env.example
+mlruns/
+mlflow.db
+data/
+frontend/node_modules/
+frontend/.next/
+.pytest_cache/
+.vscode/

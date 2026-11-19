@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Machine Health | Predictive Maintenance</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <aside class="sidebar">
+    <div class="brand">⚙ Machine<span>Pulse</span></div>
+    <p class="muted">INDUSTRIAL INTELLIGENCE</p>
+    <a class="active">▦ Overview</a>
+    <a>◉ Failure Prediction</a>
+    <a>◷ Remaining Life</a>
+    <a>⌁ Model Monitoring</a>
+    <div class="side-bottom">MLOps · AI4I 2020</div>
+  </aside>
+  <main>
+    <header>
+      <div><p class="muted">PREDICTIVE MAINTENANCE / OVERVIEW</p><h1>Machine Health Dashboard</h1>
+      <p class="muted">Monitor equipment condition and predict potential failures.</p></div>
+      <div class="live"><i></i> API CONNECTION</div>
+    </header>
+    <section class="cards">
+      <div class="card"><p class="muted">MODEL STATUS</p><h2 id="modelStatus">Checking...</h2><small>Trained ML pipeline</small></div>
+      <div class="card"><p class="muted">FAILURE RISK</p><h2 id="riskCard">—</h2><small>Based on current sensor readings</small></div>
+      <div class="card"><p class="muted">ESTIMATED TOOL LIFE</p><h2 id="lifeCard">—</h2><small>Remaining minutes (proxy)</small></div>
+    </section>
+    <section class="panel">
+      <div class="panel-head"><div><h2>Live Sensor Input</h2><p class="muted">Enter machine operating parameters</p></div><span class="tag">AI4I SENSOR PROFILE</span></div>
+      <form id="predictionForm">
+        <div class="fields">
+          <label>Machine type<select id="type"><option>M</option><option>L</option><option>H</option></select></label>
+          <label>Air temperature (K)<input id="air" type="number" value="300" step="0.1"></label>
+          <label>Process temperature (K)<input id="process" type="number" value="310" step="0.1"></label>
+          <label>Rotational speed (rpm)<input id="speed" type="number" value="1500"></label>
+          <label>Torque (Nm)<input id="torque" type="number" value="40" step="0.1"></label>
+          <label>Tool wear (min)<input id="wear" type="number" value="100"></label>
+        </div>
+        <button type="submit">Run Failure & RUL Prediction →</button>
+      </form>
+      <div id="result" class="result hidden"></div>
+    </section>
+    <section class="panel bottom">
+      <div><h2>Model & MLOps Information</h2><p class="muted">Experiment tracking and monitoring</p></div>
+      <div class="info-grid">
+        <div><small>EXPERIMENT TRACKING</small><b>MLflow</b></div>
+        <div><small>CLASSIFICATION MODEL</small><b>Random Forest / Gradient Boosting</b></div>
+        <div><small>REGRESSION MODEL</small><b>Random Forest Regressor</b></div>
+        <div><small>DATA DRIFT</small><b>Run <code>python drift.py</code></b></div>
+      </div>
+      <p class="disclaimer">RUL is demonstrated as a tool-wear-based proxy because AI4I does not provide actual remaining-life labels.</p>
+    </section>
+    <footer>Predictive Maintenance & RUL Prediction · Academic prototype</footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
